@@ -1,0 +1,325 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Header con usuario */
+body > p:first-child {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+body > p:first-child a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+body > p:first-child a:hover {
+    text-decoration: underline;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtítulo */
+body > p:nth-of-type(2) {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Tarjetas de rachas */
+.tarjeta {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tarjeta h2 {
+    color: #667eea;
+    font-size: 1.6em;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.tarjeta p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.tarjeta p strong {
+    color: #333;
+}
+
+/* Contador de días */
+.tarjeta p:has(strong:only-child) {
+    font-size: 2em;
+    color: #e74c3c;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Botones */
+.boton, .boton-rojo, button[type="submit"] {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.boton:hover, button[type="submit"]:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Botones de acciones en tarjetas */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.botones .boton {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+/* Variantes de botones */
+.boton.verde {
+    background: #27ae60;
+}
+
+.boton.verde:hover {
+    background: #229954;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+}
+
+.boton.rojo {
+    background: #e74c3c;
+}
+
+.boton.rojo:hover {
+    background: #c0392b;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+.boton.gris {
+    background: #95a5a6;
+}
+
+.boton.gris:hover {
+    background: #7f8c8d;
+    box-shadow: 0 4px 12px rgba(149, 165, 166, 0.4);
+}
+
+.boton-rojo {
+    background: #95a5a6;
+    margin-left: 10px;
+}
+
+.boton-rojo:hover {
+    background: #7f8c8d;
+}
+
+/* Formularios */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 15px;
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    margin-bottom: 15px;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Mensajes */
+p[style*="color:red"],
+p[style*="color:green"] {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p[style*="color:red"] {
+    background: #fee;
+    border-left: 4px solid #e74c3c;
+    color: #c0392b !important;
+}
+
+p[style*="color:green"] {
+    background: #efe;
+    border-left: 4px solid #27ae60;
+    color: #229954 !important;
+}
+
+/* Botón flotante para nueva racha */
+body > a.boton {
+    display: block;
+    max-width: 250px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+/* RESPONSIVE - MOBILE */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+    }
+
+    body > p:nth-of-type(2) {
+        font-size: 0.95em;
+        margin-bottom: 20px;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .tarjeta {
+        padding: 20px;
+    }
+
+    .tarjeta h2 {
+        font-size: 1.4em;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .botones .boton {
+        width: 100%;
+        min-width: auto;
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    body > p:first-child {
+        font-size: 13px;
+        padding: 10px 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .tarjeta {
+        padding: 15px;
+    }
+
+    .tarjeta h2 {
+        font-size: 1.2em;
+    }
+
+    .boton, button[type="submit"] {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
